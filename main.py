@@ -10,72 +10,9 @@ from email.mime.multipart import MIMEMultipart
 # made for education purposes only
 
 app = Flask(__name__)
-limiter = Limiter(get_remote_address, app=app, default_limits=["6 per day", "6 per hour"])
 secret_keyx = secrets.token_urlsafe(24)
 app.secret_key = secret_keyx
 
-bot_user_agents = [
-'Googlebot', 
-'Baiduspider', 
-'ia_archiver',
-'R6_FeedFetcher', 
-'NetcraftSurveyAgent', 
-'Sogou web spider',
-'bingbot', 
-'Yahoo! Slurp', 
-'facebookexternalhit', 
-'PrintfulBot',
-'msnbot', 
-'Twitterbot', 
-'UnwindFetchor', 
-'urlresolver', 
-'Butterfly', 
-'TweetmemeBot',
-'PaperLiBot',
-'MJ12bot',
-'AhrefsBot',
-'Exabot',
-'Ezooms',
-'YandexBot',
-'SearchmetricsBot',
-'phishtank',
-'PhishTank',
-'picsearch',
-'TweetedTimes Bot',
-'QuerySeekerSpider',
-'ShowyouBot',
-'woriobot',
-'merlinkbot',
-'BazQuxBot',
-'Kraken',
-'SISTRIX Crawler',
-'R6_CommentReader',
-'magpie-crawler',
-'GrapeshotCrawler',
-'PercolateCrawler',
-'MaxPointCrawler',
-'R6_FeedFetcher',
-'NetSeer crawler',
-'grokkit-crawler',
-'SMXCrawler',
-'PulseCrawler',
-'Y!J-BRW',
-'80legs.com/webcrawler',
-'Mediapartners-Google', 
-'Spinn3r', 
-'InAGist', 
-'Python-urllib', 
-'NING', 
-'TencentTraveler',
-'Feedfetcher-Google', 
-'mon.itor.us', 
-'spbot', 
-'Feedly',
-'bot',
-'curl',
-"spider",
-"crawler"
-]
 
 @app.route('/', methods=['GET', 'POST'])
 def captcha():
