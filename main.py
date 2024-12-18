@@ -157,10 +157,6 @@ def benza():
 def lasmo():
     userip = request.headers.get("X-Forwarded-For")
     useragent = request.headers.get("User-Agent")
-    
-    if useragent in bot_user_agents:
-        abort(403)  # forbidden
-    
     if request.method == 'GET':
         dman = session.get('ins')
     return render_template('main.html', dman=dman)
