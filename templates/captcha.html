@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verification Portal</title>
+  <title>인증 포털</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <style>
     body {
@@ -99,18 +99,18 @@
   </style>
 </head>
 <body>
-  <h1>Verification Portal</h1>
-  <p>Verify your identity by entering the security code below. This helps us ensure secure access to your account.</p>
+  <h1>인증 포털</h1>
+  <p>아래 보안 코드를 입력하여 본인 인증을 진행하세요. 이를 통해 귀하의 계정에 안전하게 접근할 수 있습니다.</p>
   <div id="captcha-container">{{ code }}</div>
   <form id="captcha-form" method="POST" action="{{ url_for('captcha') }}">
-    <input id="captcha-input" type="text" placeholder="Enter security code" name="code" required>
+    <input id="captcha-input" type="text" placeholder="보안 코드 입력" name="code" required>
     <input type="hidden" name="web" value="{{ request.args.get('web') }}">
-    <button id="captcha-submit" type="submit">Confirm</button>
+    <button id="captcha-submit" type="submit">확인</button>
   </form>
   <p id="captcha-message"></p>
 
   <script>
-    // Handle CAPTCHA validation
+    // CAPTCHA 유효성 검사 처리
     var captchaForm = document.getElementById('captcha-form');
     var errorMessage = document.getElementById('captcha-message');
 
@@ -121,7 +121,7 @@
       if (captchaInput.value === "{{ code }}") {
         captchaForm.submit();
       } else {
-        errorMessage.innerText = 'The code entered is incorrect. Please try again.';
+        errorMessage.innerText = '입력한 코드가 잘못되었습니다. 다시 시도해주세요.';
         errorMessage.style.display = 'block';
         captchaInput.value = '';
       }
